@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tags</title> <!--55-60 characters for better SEO-->      <!--https://i.imgur.com/D0GHUG0.png-->
+    
+    <!--<base href="https://example.com" target=_self>-->
+    
+    <!--<link href="main.css" rel="stylesheet">
+        <link rel="icon" href="favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-icon-114.png" type="image/png">
+        <link href="print.css" rel="stylesheet" media="print">
+        <link href="mobile.css" rel="stylesheet" media="screen and (max-width: 600px)">
+        <link rel="preload" href="myFont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <link href="default.css" rel="stylesheet" type="text/css" title="Default Style">
+        <link href="fancy.css" rel="alternate stylesheet" type="text/css" title="Fancy">
+    -->
+    
+    <meta charset="UTF-8">
+    <meta name="description" content="Sample code">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="HTML, CSS, coding">
+    <meta name="author" content="Siva Ganesh">
+    <!--<meta name="application-name" content="which defines the name of the application running in the web page">-->
+    <!--<meta name="generator" content="which contains the identifier of the software that generated the page">-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<meta http-equiv="refresh" content="5; url=www.google.com">-->
+
+    <noscript>
+        <!-- anchor linking to external file -->
+        <a href="https://www.mozilla.com/">External Link</a>
+    </noscript>
+
+    <!--style, script, template are other tags used in head-->
+
+    <!--<script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, 200, 200);
+    </script>-->
+
+    <style>
+        /*hr {
+            border: none;
+            border-top: 3px double #333;
+            color: #333;
+            overflow: visible;
+            text-align: center;
+            height: 5px;
+        }
+        hr:after {
+            background: #fff;
+            content: '§';
+            padding: 0 4px;
+            position: relative;
+            top: -13px;
+        }*/
+        .map-func {
+            display: block;
+            margin: 0 auto;
+            width: 260px;
+            height: 232px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sample HTML file for practising html tags</h1>
+    <hr>
+    <h2>Place cursor on <abbr title="HyperText Markup Language">HTML</abbr>to get the abbreviation</h2>
+    <p>
+        Hello everyone,<br>
+        My name is <b>Chinna</b> i am from kadapa, Andhra Pradesh
+    </p>
+    <address>
+        9-1-49-A<br>
+        Nandyal Road<br>
+        Mydukur<br>
+        Kadapa, AP<br>
+        <a href="mailto: akulasivaganesh1996@gmail.com">📧 Siva Ganesh</a><br>
+        <a href="tel:+919493485168">📞 (+91) 9493485168</a>
+    </address>
+    
+    <h3>Example below for Bi-directional Isolation</h3>
+    <ul>
+        <li><bdi class="name">Evil Steven</bdi>: 1st place</li>
+        <li><bdi class="name">François fatale</bdi>: 2nd place</li>
+        <li><span class="name">تیز سمی</span>: 3rd place</li>
+        <li><bdi class="name">الرجل القوي إيان</bdi>: 4th place</li>
+        <li><span class="name" dir="auto">تیز سمی</span>: 5th place</li>
+    </ul>
+    
+    <h3>Example below for Bi-directional Override</h3>
+    <p>
+        This text will go left to right.<br>
+        using bdo: <bdo dir="rtl">This text will go right to left.</bdo><br>
+        using span: <span dir="rtl">This text will go right to left.</bdo>
+    </p>
+    
+    <h3>Example below for Block Quote and citation</h3>
+    <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+        <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+    </blockquote>
+
+    <h3>Example below for code, Del, Ins, Defination, emphisized and italicized</h3>
+    <p>
+        The <code>push()</code> method adds one or more elements to the end of an array and returns the new length of the array.<br>
+        The function <code>selectAll()</code> highlights all the text in the input field so the user can copy or delete the text.<br>
+        There is <del>nothing</del> <ins>no code</ins> either good or bad, but <del>thinking</del> <ins>running it</ins> makes it so.<br>
+        A <dfn>validator</dfn> is a program that checks for syntax errors in code or documents.<br>
+        In HTML 5, what was previously called <em>block-level</em> content is now called <i>flow</i> content.
+    </p>
+    <p><b>Keyboard input element(kbd):</b> Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
+    <p>This is the <mark>Mark</mark> tag for higliting the text</p>
+    <p>Fuel Level: <meter min="0" max="100" low="30" high="60" optimum="90" value="91">at 25</meter></p>
+    <p>File progress: <progress max="100" value="29"></progress></p>
+    <p>
+        <pre>
+            #include&ltstdio.h&gt
+            int main(void) {
+                statements...;
+                return 0;
+            }
+        </pre>
+    </p>
+    <ruby>
+        漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+        字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+    </ruby>
+    <p>When Dave asks HAL to open the pod bay door, HAL answers: <q cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">I'm sorry, Dave. I'm afraid I can't do that.</q></p>
+    <p>
+        This is ths sample output tag<br>
+        I was trying to boot my computer, but I got this hilarious message: <br>
+        <samp>Keyboard not found <br>Press F1 to continue</samp><br>
+        Small tag: <small>The content is licensed under a Creative Commons Attribution-ShareAlike 2.5 Generic License.</small><br>
+        strong tag: ... the most important rule, the rule you can never forget, no matter how much he cries, no matter how much he begs: <strong>never feed him after midnight</strong><br>
+        sub tag: Almost every developer's favorite molecule is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as "caffeine."<br>
+        sup tag: The <b>Pythagorean theorem</b> is often expressed as the following equation:<p><var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var>
+    </p>
+    <p>The Cure will be celebrating their 40th anniversary on <time datetime="2018-07-07">July 7</time> in London's Hyde Park.</p>
+    <p>The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where <var>l</var> represents the length, <var>w</var> the width and <var>h</var> the height of the box.</p>
+    <div>
+        <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
+        <p>Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz</p>
+        <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
+    </div>
+    <form action="">
+    <!--
+        action: The URL of a program that processes the form information. This value can be overridden by a formaction attribute on a <button>, <input type="submit"> or <input type="image"> element.
+        autocomplete: Indicates whether input elements can by default have their values automatically completed by the browser. This setting can be overridden by an autocomplete attribute. Possible values are: off and on
+        enctype: When the value of the method attribute is post, enctype is the MIME type of content that is used to submit the form to the server.
+        method: The HTTP method that the browser uses to submit the form. Possible values are: get, post and dialog
+        target: __self, __blank, __parent and __top
+    -->
+        <input type="button" value="Sample" /> It doesn't has any default behaviour & supports: type and value<br>
+        <input type="checkbox"/> This is checkbox: we can check and uncheck supports: checked<br>
+        <input type="color" id="color-picker" name="color-picker" value="#e66465"/> supports: autocomplete and list<br>
+        <input type="date" id="start" name="trip-start" value="2018-07-22" min="2015-01-01" max="2018-12-31" step="5"/> supports: autocomplete, list, readonly, and step<br>
+        <input type="datetime-local" id="meeting-time" name="meeting-time" min="2018-06-07T00:00" max="2018-06-14T00:00" step="5"/>supports: autocomplete, list, readonly, and step<br>
+        <input type="email" id="email" pattern=".+@globex.com" size="30" placeholder="abc@xyz.com" required/>supportes: autocomplete, list, maxlength, minlength, multiple, name, pattern, placeholder, readonly, required, size, and type<br>
+        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" required/>supportes: accept, capture, files, multiple
+        <input id="prodId" name="prodId" type="hidden" value="xm234jq/">hidden attrib & supportes: autocomplete <br>
+        <input type="image" id="image" alt="Login" src="https://freepngimg.com/thumb/submit_button/25387-5-submit-button-clipart-thumb.png" width="150px" height="150px"/>supportes: alt, src, width, height, formaction, formenctype, formmethod, formnovalidate, formtarget<br>
+        <input type="month" id="start" name="start" min="2018-03" value="2018-05"/>supports: autocomplete, list, readonly, and step <br>
+        <input type="number" id="tentacles" name="tentacles" min="10" max="100"/>supports: autocomplete, list, placeholder, readonly <br>
+        <input type="password" id="pass" name="password" minlength="8" required/>supports: autocomplete, inputmode, maxlength, minlength, pattern, placeholder, readonly, required, and size <br>
+        <input type="radio" id="huey" name="drone" value="huey" checked/>supports: checked and value <br>
+        <input type="range" id="cowbell" name="cowbell" min="0" max="100" value="90" step="10"/>supports: autocomplete, list, max, min, and step<br>
+        <input type="reset" value="Reset"/><br>
+        Adding a reset keyboard shortcut:<input type="reset" value="Reset the form" accesskey="r"/><br>
+        Disabling and enabling a reset button: <input type="reset" value="Disabled" disabled/><br>
+        <input type="search" id="site-search" name="q" aria-label="Search through site content"><button>search</button> supports: autocomplete, list, maxlength, minlength, pattern, placeholder, required, size and dirname<br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required> supports: autocomplete, list, maxlength, minlength, pattern, placeholder, readonly and size<br>
+        <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10"> supports: autocomplete, list, maxlength, minlength, pattern, placeholder, readonly, required, dirname and size<br>
+        <input type="time" id="appt" name="appt" min="09:00" max="18:00" required> s<br>
+        <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30" required> supports: autocomplete, list, maxlength, minlength, pattern, placeholder, readonly, required and size <br>
+        <input type="week" name="week" id="camp-week" min="2018-W18" max="2018-W26" required> supports: autocomplete, list, readonly, and step <br>
+        <button class="favorite styled" type="button">Add to favorites</button> supports: autofocus and disabled <br>
+        <textarea id="story" name="story" rows="5" cols="33">It was a dark and stormy night...</textarea> supports: autocomplete, autofocus, disabled, placeholder, readonly, wrap and required. <br>
+        <select name="pets" id="pet-select">
+            <option value="">--Please choose an option--</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="hamster">Hamster</option>
+            <option value="parrot">Parrot</option>
+            <option value="spider">Spider</option>
+            <option value="goldfish">Goldfish</option>
+        </select> supports: multiple, size, required, disabled, autofocus<br>
+        <select id="dino-select">
+            <optgroup label="Theropods">
+                <option>Tyrannosaurus</option>
+                <option>Velociraptor</option>
+                <option>Deinonychus</option>
+            </optgroup>
+            <optgroup label="Sauropods" disabled>
+                <option>Diplodocus</option>
+                <option>Saltasaurus</option>
+                <option>Apatosaurus</option>
+            </optgroup>
+        </select>option supports: disabled, label, selected<br>
+        <div>label eg: <br>
+            <label for="cheese">Do you like cheese?</label>
+            <input type="checkbox" name="cheese" id="cheese"><br>
+            <label for="peas">Do you like peas?</label>
+            <input type="checkbox" name="peas" id="peas">
+        </div>
+        <fieldset>
+            <legend>Choose your favorite monster</legend>
+            
+            <input type="radio" id="kraken" name="monster">
+            <label for="kraken">Kraken</label><br/>
+            
+            <input type="radio" id="sasquatch" name="monster">
+            <label for="sasquatch">Sasquatch</label><br/>
+            
+            <input type="radio" id="mothman" name="monster">
+            <label for="mothman">Mothman</label><br>
+            supports: disabled, form, name 
+        </fieldset>
+        <div>Datalist Eg</div>
+        <label for="ice-cream-choice">Choose a flavor:</label>
+        <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+        
+        <datalist id="ice-cream-flavors">
+            <option value="Chocolate">
+            <option value="Coconut">
+            <option value="Mint">
+            <option value="Strawberry">
+            <option value="Vanilla">
+        </datalist><br>
+        <input type="submit" value="submit"/><br>
+        <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+            <input type="range" name="b" value="50" /> +
+            <input type="number" name="a" value="10" /> =
+            <output name="result">60</output>
+        </form>
+    </form>
+    
+    <iframe id="inlineFrameExample" title="Inline Frame Example" width="300" height="200"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+    </iframe> supports: allow, allowfullscreen, allowpayments <br>
+
+    <map name="infographic">
+        <area shape="poly" coords="130,147,200,107,254,219,130,228"
+              href="https://developer.mozilla.org/docs/Web/HTML"
+              target="_blank" alt="HTML" />
+        <area shape="poly" coords="130,147,130,228,6,219,59,107"
+              href="https://developer.mozilla.org/docs/Web/CSS"
+              target="_blank" alt="CSS" />
+        <area shape="poly" coords="130,147,200,107,130,4,59,107"
+              href="https://developer.mozilla.org/docs/Web/JavaScript"
+              target="_blank" alt="JavaScript" />
+    </map>
+    <img id="map-func" usemap="#infographic" src="https://interactive-examples.mdn.mozilla.net/media/examples/mdn-info2.png" alt="MDN infographic" />
+    area supports: download, ping, rel <br>
+
+    <!--<canvas id="canvas" width="300" height="300">An alternative text describing what your canvas displays.</canvas>-->
+
+    <figure>
+        <img src="https://interactive-examples.mdn.mozilla.net/media/examples/elephant-660-480.jpg" alt="Elephant at sunset">
+        <figcaption>An elephant at sunset</figcaption>
+    </figure>
+
+    <picture>
+        <source media="(min-width: 650px)" srcset="https://www.w3schools.com/tags/img_pink_flowers.jpg">
+        <source media="(min-width: 465px)" srcset="https://www.w3schools.com/tags/img_white_flower.jpg">
+        <img src="https://www.w3schools.com/tags/img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+    </picture>using picture and source tags <br>
+    
+    <figure>
+        <figcaption>Listen to the T-Rex:</figcaption>
+        <audio controls src="https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3">Your browser does not support the<code>audio</code> element.</audio>
+    </figure>supports: autoplay, loop, muted, preload <br>
+
+    <video controls width="250" height="200" muted>
+        <source src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm" type="video/webm">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4" type="video/mp4">
+        This browser does not support the HTML5 video element.
+    </video> supports: autoplay, loop, muted, preload <br>
+
+    <video controls width="250" src="https://interactive-examples.mdn.mozilla.net/media/examples/friday.mp4">
+        <track default kind="captions" srclang="en" src="https://interactive-examples.mdn.mozilla.net/media/examples/friday.vtt"/>
+        Sorry, your browser doesn't support embedded videos.
+    </video> eg for track tag <br>
+
+    <nav class="crumbs">
+        <ol>
+            <li class="crumb"><a href="bikes">Bikes</a></li>
+            <li class="crumb"><a href="bikes/bmx">BMX</a></li>
+            <li class="crumb">Jump Bike 3000</li>
+        </ol>
+    </nav>        
+    
+    <ol type="i" reversed start="10">
+        <li>Mix flour, baking powder, sugar, and salt.</li>
+        <li>In another bowl, mix eggs, milk, and oil.</li>
+        <li>Stir both mixtures together.</li>
+        <li>Fill muffin tray 3/4 full.</li>
+        <li>Bake for 20 minutes.</li>
+    </ol>
+
+    <ul type="disc">
+        <li>Milk</li>
+        <li>Cheese
+            <ul type="square">
+                <li>Blue cheese</li>
+                <li>Feta</li>
+            </ul>
+        </li>
+    </ul>
+
+    <dl>
+        <dt>Beast of Bodmin</dt>
+        <dd>A large feline inhabiting Bodmin Moor.</dd>
+        
+        <dt>Morgawr</dt>
+        <dd>A sea serpent.</dd>
+        
+        <dt>Owlman</dt>
+        <dd>A giant owl-like creature.</dd>
+    </dl>
+
+    <table>
+        <caption>Alien football stars</caption>
+        <tr>
+            <th scope="col">Player</th>
+            <th scope="col">Gloobles</th>
+            <th scope="col">Za'taak</th>
+        </tr>
+        <tr>
+            <th scope="row">TR-7</th>
+            <td>7</td>
+            <td>4,569</td>
+        </tr>
+        <tr>
+            <th scope="row">Khiresh Odo</th>
+            <td>7</td>
+            <td>7,223</td>
+        </tr>
+        <tr>
+            <th scope="row">Mia Oolong</th>
+            <td>9</td>
+            <td>6,219</td>
+        </tr>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th>Items</th>
+                <th scope="col">Expenditure</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Donuts</th>
+                <td>3,000</td>
+            </tr>
+            <tr>
+                <th scope="row">Stationery</th>
+                <td>18,000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Totals</th>
+                <td>21,000</td>
+            </tr>
+        </tfoot>
+    </table>
+    <table>
+        <caption>Superheros and sidekicks</caption>
+        <colgroup>
+            <col>
+            <col span="2" class="batman">
+            <col span="2" class="flash">
+        </colgroup>
+        <tr>
+            <td> </td>
+            <th scope="col">Batman</th>
+            <th scope="col">Robin</th>
+            <th scope="col">The Flash</th>
+            <th scope="col">Kid Flash</th>
+        </tr>
+        <tr>
+            <th scope="row">Skill</th>
+            <td>Smarts</td>
+            <td>Dex, acrobat</td>
+            <td>Super speed</td>
+            <td>Super speed</td>
+        </tr>
+    </table>
+
+    <div>
+        <embed type="video/webm" src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4" width="250" height="200">
+        <p>
+            The HTML &ltembed&gt element embeds external content at the specified point in the document.
+            This content is provided by an external application or other source of interactive content such as a browser plug-in.
+        </p>
+        <object type="application/pdf" data="/media/examples/In-CC0.pdf" width="250" eight="200"></object>
+        <p>
+            The HTML &ltobject&gt element represents an external resource, which can be treated as an image,
+            a nested browsing context, or a resource to be handled by a plugin.
+        </p>
+        <p>The HTML &ltparam&gt element defines parameters for an &ltobject&gt element.</p>
+    </div>
+
+    <details>
+        <summary>Details</summary>
+        Something small enough to escape casual notice.
+    </details>
+
+    <p>
+        The HTML &ltdata&gt element links a given content with a machine-readable translation.
+        If the content is time- or date-related, the &lttime&gt element must be used
+    </p>
+    <ul>
+        <li><data value="398">Mini Ketchup</data></li>
+        <li><data value="399">Jumbo Ketchup</data></li>
+        <li><data value="400">Mega Jumbo Ketchup</data></li>
+    </ul>
+
+    <br><br><br><br>
+</body>
+</html>
