@@ -1,0 +1,18 @@
+body {
+    margin: 0em;
+}
+
+#headerWrapper {
+    padding: 0.5em 1em;
+    background-color: aqua;
+}
+#headerWrapper > a > img {
+    width: 48px;
+    height: 72px;
+}
+#headerWrapper > button {
+    width: 6em;
+    height: 3em;
+    border-radius: 5px;
+    border: none;
+}
