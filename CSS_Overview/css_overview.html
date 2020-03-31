@@ -1,0 +1,637 @@
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Overview</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow:400,400i&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0px;
+        }
+        .addingBorder {
+            border-style: dotted; /* dashed solid double none mixed */
+            border-color: blue;
+            border-width: 2px;
+            border-radius: 10px;
+            /* short hand form */
+            border: 4px dotted blue;
+            
+            /* Like border-top bottom, left and right also available */
+            border-top-color: blueviolet;
+            border-top-style: dashed;
+            border-top-width: 5px;
+            border-top-left-radius: 20px;
+            /* shorthand form */
+            border-top: 8px dotted blueviolet;
+        }
+        .textStyling {
+            color: #8b8b99;
+            line-height: 2.5rem;
+            font-weight: 800; /*normal bold 100-900 etc*/
+            font-size: 28px;
+            font-style: normal; /*italic*/
+            letter-spacing: 0.4px;
+            word-spacing: 0.4px;
+            text-transform: capitalize; /*uppercase lowercase*/
+            text-align: justify; /*center right left*/
+            text-decoration: none; /*overline underline linethrough*/
+            font-family: 'Tomorrow', sans-serif;
+        }
+        .paddingAndMargin {
+            padding: 10px 10px;
+            margin: 0px 0px;
+        }
+        .cursorToDiv {
+            cursor: pointer; /* not-allowed progress grab zoom-in zoom-out */
+        }
+        header {
+            width: 87%;
+            background-color: lightblue;
+            padding: 15px 100px;
+            margin-bottom: 10px;
+            position: fixed;
+            z-index: 1;
+        }
+        .headLinkWrapper > a {
+            font-size: 30px;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .headLinkWrapper > a:link {
+            color: green;   
+        }
+        .headLinkWrapper > a:visited {
+            color: red;
+        }
+        .headLinkWrapper > a:hover {
+            text-decoration: underline;
+        }
+        .headLinkWrapper > a:active {
+            color: coral;
+        }
+        .headLinkWrapper > button {
+            border: 3px solid green;
+            font-size: 20px;
+            padding: 5px 40px;
+            float: right;
+            margin-right: 5px;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            font-weight: 700;
+            outline: none;
+        }
+        .headLinkWrapper > button:hover {
+            background-color: lightblue;
+            color: green;
+        }
+        main {
+            width: 100%;
+        }
+        .asideLink > a {
+            display: block;
+            text-decoration: none;
+            font-size: 25px;
+            padding-left: 20px;
+            border-bottom: 1px solid grey;
+        }
+        .asideWrapper {
+            display: inline-block;
+            vertical-align: top;
+            width: 10%;
+            margin-top: 100px;
+            margin-left: 3px;
+            border: 1px solid grey;
+            border-radius: 5px;
+            position: sticky;
+            top: 75px;
+        }
+        .inlineBlock {
+            width: 89%;
+            display: inline-block;
+            margin-top: 75px;
+        }
+        .visibilityWrapper:hover {
+            visibility: hidden;
+        }
+        .positionProperty {
+            margin: 5px 0px;
+            background-color: coral;
+            height: 750px;
+            position: relative;
+        }
+        .positionProperty > img {
+            position: absolute;
+            bottom: 50px;
+        }
+        .boxSizing > img {
+            width: 250px;
+            height: 250px;
+        }
+        .boxSizing {
+            width: 250px;
+            height: 250px;
+            background-color: coral;
+            padding: 25px;
+            box-sizing: content-box;
+            display: inline-block;
+        }
+        .boxSizingBorderBox > img {
+            width: 100%;
+            height: 100%;
+        }
+        .boxSizingBorderBox {
+            width: 250px;
+            height: 250px;
+            background-color: coral;
+            padding: 25px;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+        .imgInline {
+            display: inline-block;
+        }
+        .shadow > p {
+            font-size: 100px;
+            color: grey;
+            text-shadow: 3px 3px 5px green;
+            display: inline-block;
+        }
+        .shadow > img {
+            display: inline-block;
+            margin: 0px 100px;
+            box-shadow: 2px 2px 10px 5px grey;
+        }
+        .background {
+            height: 500px;
+            background-color: grey;
+            background-image: url("https://scontent.fhyd3-1.fna.fbcdn.net/v/t1.0-9/p960x960/34175074_2005695009748812_1832553298415058944_o.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=H5NKjTAfUGcAX83rgqk&_nc_ht=scontent.fhyd3-1.fna&_nc_tp=6&oh=8fe17bb41099104f288182f18388a9ec&oe=5EA583C5");
+            background-repeat: repeat; /* no-repeat, repeat-x, repeat-y,  */
+            background-position: top left; /* left, right, bottom, center dimensions */
+            background-size: contain; /* cover, auto, dimensions */
+            background-attachment: fixed; /* scrool(default) */
+        }
+        .gradient {
+            display: inline-block;
+        }
+        .linearGradient {
+            margin: 15px auto;
+            background-image: linear-gradient(to right, red, green, blue);
+            display: inline-block;
+            border-radius: 5px;
+            padding: 3px;
+        }
+        .linearGradient > button {
+            border: none;
+            font-size: 25px;
+            padding: 20px 40px;
+            border-radius: 5px;
+            background-color: transparent;
+            font-weight: 700;
+            color: white;
+        }
+        .linearGradient:hover > button {
+            cursor: pointer;
+            background: white;
+        }
+        .linearGradient:hover  span {
+            background-image: linear-gradient(to right, red, green, blue); /* radial-gradient(to position or degree, startColor... endColor) */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .radialGradient {
+            background-image: radial-gradient(red, green, blue); /* radial-gradient(shape size at position, startColor... endColor) */
+            display: inline-block;
+            border-radius: 5px;
+            padding: 3px;
+        }
+        .radialGradient > button {
+            border: none;
+            padding: 20px 40px;
+            border-radius: 5px;
+            background-color: transparent;
+            font-weight: 700;
+            font-size: 25px;
+            color: white;
+        }
+        .radialGradient:hover > button {
+            cursor: pointer;
+            background: white;
+        }
+        .radialGradient:hover  span {
+            background-image: radial-gradient(red, green, blue);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .textFlow {
+            width: 200px;
+            background-color: lightblue;
+            /* word-wrap: break-word; */ /* normal */
+            white-space: nowrap; /* normal, pre */
+            overflow: hidden;
+            text-overflow: ellipsis; /* clip */
+        }
+        .flexProperties {
+            height: 400px;
+            background-color: lightblue;
+            margin: 5px 0px;
+            padding: 10px;
+            display: flex; /* inline-flex */
+            flex-direction: row; /* row-reverse, column, column-reverse */
+            justify-content: space-evenly; /* flex-start, flex-end, center, space-between, space-around */
+            align-items: center; /* flex-start, flex-end, strech, baseline */
+        }
+        .flexProperties > div {
+            background-color: lightcoral;
+            margin: 5px;
+            padding: 20px 75px;
+        }
+        .flexProperties2 {
+            height: 400px;
+            background-color: lightblue;
+            margin: 5px 0px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-evenly;
+            /* align-items: stretch; */
+            align-content: stretch; /* flex-start, flex-end, space-between, space-around, center */
+            flex-wrap: wrap; /* nowrap, wrap-reverse */
+        }
+        .flexProperties2 > div {
+            background-color: lightcoral;
+            margin: 5px;
+            padding: 20px 75px;
+        }
+        .transform {
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(red, green);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* transform: translate(20px, 20px); */  /* % also given */
+            /* transform: translateX(20px) translateY(50px); */
+            
+            /* transform: scale(1.2, 1.2); */
+            /* transform: scaleX(1.2) scaleY(1.2); */
+
+            /* transform: skew(20deg, 20deg); */
+            /* transform: skewX(20deg) skewY(20deg); */
+
+            /* transform: rotate(20deg); */
+            /* transform-origin: 0 0;  */ /* top, left, right, bottom */
+            /* transform: rotate(45deg); */
+            /* transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg); */
+
+            /* transistion-property duration timing-function transition-delay */
+            transition: all 1s ease-in 2000ms; /* timing-function: ease(default), linear, ease-in, ease-out ease-in-out, cubic-bezier */
+        }
+        .transform:hover {
+            transform: translateX(1050px);
+        }
+        .animation {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            background-color: skyblue;
+            margin-top: 10px;
+            box-sizing: border-box;
+
+            /* animation: name duration timing-function delay iteration-count direction: normal and reverse; fill-mode: forwards and backwards; */
+            animation: animationSam 3s ease-in-out 2s 6 alternate forwards;
+        }
+        .animation:hover {
+            animation-play-state: paused;
+        }
+        @keyframes animationSam {
+            0% {
+                border-radius: 0%;
+                border: 25px solid black;
+            }
+            100% {
+                border-radius: 50%;
+                border: 1px solid black;
+            }
+        }
+        #subCombinators {
+            background-color: lightcoral;
+            width: 400px;
+            margin: 0 auto;
+            padding: 16px;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        #subCombinators > input {
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 8px 8px;
+            margin: 10px 0px;
+            box-sizing: border-box;
+        }
+        #subCombinators > input:required {
+            background-color: lightblue;
+        }
+        #subCombinators > input:disabled {
+            cursor: not-allowed;
+        }
+        #subCombinators > input:focus {
+            background-color: blue;
+        }
+        /* .pseudeClasses li:first-child {
+            background-color: lightskyblue;
+        } */
+        /* .pseudeClasses > li:nth-child(2n) {
+            background-color: lightskyblue;
+        } */
+        /* .pseudeClasses > li:nth-last-child(2n) {
+            background-color: lightskyblue;
+        } */
+        /* .pseudeClasses > ul:last-child {
+            background-color: lightskyblue;
+        } */
+        /* .pseudeClasses > ul:only-of-type {
+            background-color: lightskyblue;
+        } */
+        /* .pseudeClasses > ul:first-of-type {
+            background-color: lightskyblue;
+        } */
+        /* .pseudeClasses > ul:last-of-type {
+            background-color: lightskyblue;
+        } */
+        /* .pseudeClasses > ul:nth-of-type(2n) {
+            background-color: lightskyblue;
+        } */
+        .pseudeClasses > ul:nth-last-of-type(2n+1) {
+            background-color: lightskyblue;
+        }
+        .firstPara::first-line {
+            color: red;
+            font-size: 24px;
+        }
+        .secondPara::first-letter {
+            color: red;
+            font-size: 36px;
+        }
+        .thirdPara::selection {
+            background-color: white;
+        }
+        .thirdPara::before {
+            content: "START=>";
+        }
+        .thirdPara::after {
+            content: "<=END";
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: tomato;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: aqua;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: green;
+        }
+        #maxWidth > img {
+            width: 100%;
+        }
+        #maxWidth {
+            width: 60%;
+            max-width: 500px;
+            margin: 0px auto;   
+        }
+        @media (min-width: 901px) {
+            #mediaQuery > p {
+                font-size: 64px;
+            }
+        }
+        @media (min-width: 601px) and (max-width: 900px) {
+            #mediaQuery > p {
+                font-size: 48px;
+            }
+        }
+        @media (max-width: 600px) {
+            #mediaQuery > p {
+                font-size: 24px;
+            }
+        }
+        #impWrapper > p {
+            font-size: 90px;
+            color: blue;
+        }
+        #imp {
+            font-size: 120px !important;
+            color: green !important;   
+        }
+        #grid {
+            display: grid;
+            grid-template-columns: auto auto auto auto; /* auto, %, px, fr */
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-column-gap: 10px;
+            grid-row-gap: 20px;
+            /* grid-gap: px, px; */
+        }
+        #grid img {
+            width: 100%;
+            height: 100%;
+        }
+        #grid > div {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="positionFixProp headLinkWrapper">
+            <a href="/#">Home</a>
+            <a href="/#">About Us</a>
+            <a href="/#">Contact Us</a>
+            <button>Signup</button>
+            <button>Login</button>
+        </nav>
+    </header>
+    <main>
+        <aside class="asideWrapper">
+            <nav class="asideLink">
+                <a href="#">Section 1</a>
+                <a href="#">Section 2</a>
+                <a href="#">Section 3</a>
+                <a href="#">Section 4</a>
+                <a href="#">Section 5</a>
+                <a href="#">Section 6</a>
+                <a href="#">Section 7</a>
+                <a href="#">Section 8</a>
+                <a href="#" style="border: none;">Section 9</a>
+            </nav>
+        </aside>
+        <section class="inlineBlock">
+            <div class="cursorToDiv">
+                <p class="textStyling addingBorder paddingAndMargin visibilityWrapper">
+                    Kadapa (alternatively spelled Cuddapah) is a city in the Rayalseema region of the south-central part of Andhra Pradesh, India.
+                    It is the district headquarters of Kadapa district.
+                    As of 2011 Census of India, the city had a population of 344,893.
+                    It is located 8 kilometres (5.0 mi) south of the Penna River.
+                    The city is surrounded on three sides by the Nallamala and Palkonda Hills lying on the tectonic landscape between the Eastern and Western ghats.
+                    Black and Red ferrous soils occupy the region.
+                    The city is nicknamed "Gadapa" ('threshold') since it is the gateway from the west to the sacred hills of Tirumala.
+                </p>
+            </div>
+            <div class="positionProperty">
+                <img style="width: 200px; height: 200px" src="https://scontent.fhyd3-1.fna.fbcdn.net/v/t1.0-9/p960x960/34175074_2005695009748812_1832553298415058944_o.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=H5NKjTAfUGcAX83rgqk&_nc_ht=scontent.fhyd3-1.fna&_nc_tp=6&oh=8fe17bb41099104f288182f18388a9ec&oe=5EA583C5" alt="My pic">
+            </div>
+            <div class="imgInline">
+                <div class="boxSizing">
+                    <img src="https://scontent.fhyd3-1.fna.fbcdn.net/v/t1.0-9/p960x960/34175074_2005695009748812_1832553298415058944_o.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=H5NKjTAfUGcAX83rgqk&_nc_ht=scontent.fhyd3-1.fna&_nc_tp=6&oh=8fe17bb41099104f288182f18388a9ec&oe=5EA583C5" alt="My pic">
+                </div>
+                <div class="boxSizingBorderBox">
+                    <img src="https://scontent.fhyd3-1.fna.fbcdn.net/v/t1.0-9/p960x960/34175074_2005695009748812_1832553298415058944_o.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=H5NKjTAfUGcAX83rgqk&_nc_ht=scontent.fhyd3-1.fna&_nc_tp=6&oh=8fe17bb41099104f288182f18388a9ec&oe=5EA583C5" alt="My pic">
+                </div>
+            </div>
+            <div class="shadow">
+                <p>Text Shadow</p>
+                <img style="width: 200px; height: 200px" src="https://scontent.fhyd3-1.fna.fbcdn.net/v/t1.0-9/p960x960/34175074_2005695009748812_1832553298415058944_o.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=H5NKjTAfUGcAX83rgqk&_nc_ht=scontent.fhyd3-1.fna&_nc_tp=6&oh=8fe17bb41099104f288182f18388a9ec&oe=5EA583C5" alt="My pic">
+            </div>
+            <div class="background"></div>
+            <div class="gradient">
+                <div class="linearGradient">
+                    <button><span>Linear Gradeint</span></button>
+                </div>
+                <div  class="radialGradient">
+                    <button><span>Radial Gradeint</span></button>
+                </div>
+            </div>
+            <div class="textFlow">
+                <p>Lorem ipsum dolor Lorem ipsum dolordolordolordolordolordolordolordolor</p>
+            </div>
+            <div class="flexProperties">
+                <div>Division 1</div>
+                <div>Division 2</div>
+                <div>Division 3</div>
+                <div>Division 4</div>
+            </div>
+            <div class="flexProperties2">
+                <div>Division 01</div>
+                <div>Division 02</div>
+                <div>Division 03</div>
+                <div>Division 04</div>
+                <div>Division 05</div>
+                <div>Division 06</div>
+                <div>Division 07</div>
+                <div>Division 08</div>
+                <div>Division 09</div>
+                <div>Division 10</div>
+                <div>Division 11</div>
+                <div>Division 12</div>
+                <div>Division 13</div>
+                <div>Division 14</div>
+                <div>Division 15</div>
+            </div>
+            <div class="transform">This ia transform property</div>
+            <div class="animation"></div>
+            <div>
+                <form id="subCombinators">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name">
+                    <input type="email" placeholder="siva@gmail.com" disabled>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                </form>
+            </div>
+            <div>
+                <ul class="pseudeClasses">
+                    <li>List item 1</li>
+                    <li>List item 2</li>
+                    <li>List item 3</li>
+                    <li>List item 4</li>
+                    <ul>
+                        <li>Nested list 1 item 1</li>
+                        <li>Nested list 1 item 2</li>
+                        <li>Nested list 1 item 3</li>
+                        <li>Nested list 1 item 4</li>
+                    </ul>
+                    <ul>
+                        <li>Nested list 2 item 1</li>
+                        <li>Nested list 2 item 2</li>
+                        <li>Nested list 2 item 3</li>
+                        <li>Nested list 2 item 4</li>
+                    </ul>
+                    <ul>
+                        <li>Nested list 3 item 1</li>
+                        <li>Nested list 3 item 2</li>
+                        <li>Nested list 3 item 3</li>
+                        <li>Nested list 3 item 4</li>
+                    </ul>
+                    <ul>
+                        <li>Nested list 4 item 1</li>
+                        <li>Nested list 4 item 2</li>
+                        <li>Nested list 4 item 3</li>
+                        <li>Nested list 4 item 4</li>
+                    </ul>
+                </ul>
+            </div>
+            <div>
+                <p class="firstPara">
+                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                </p>
+                <p class="secondPara">
+                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                </p>
+                <p class="thirdPara">
+                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                </p>
+            </div>
+            <div id="maxWidth">
+                <img src="images.jpg" alt="Image for max-width property">
+            </div>
+            <div id="mediaQuery">
+                <p>This is a media query</p>
+            </div>
+            <div id="impWrapper">
+                <p id="imp">This is an important text</p>
+                <p>This is unimportant text</p>
+                <p>This is unimportant text</p>
+                <p>This is unimportant text</p>
+            </div>
+            <div id="grid">
+                <div><img src="Captain America.jpg" alt="Captain America"></div>
+                <div><img src="Iron Man.jpg" alt="Iron Man"></div>                
+                <div><img src="Thor.jpg" alt="Thor"></div>
+                <div><img src="Black Widow.jpg" alt="Black Widow"></div>
+                <div><img src="Captain Marvel.jpg" alt="Captain Marvel"></div>
+                <div><img src="Hulk.jpg" alt="Hulk"></div>
+                <div><img src="Black Panther.jpg" alt="Black Panther"></div>
+                <div><img src="Spider Man.jpg" alt="Spider Man"></div>
+                <div><img src="Gaurdians of Galaxy.jpg" alt="Gaurdians of Galaxy"></div>
+                <div><img src="Ant Man.jpg" alt="Ant Man"></div>
+            </div>
+            <div>
+                
+            </div>
+        </section>
+    </main>
+    <br><br><br><br>
+</body>
+</html>
