@@ -449,6 +449,41 @@
             width: 100%;
             height: 100%;
         }
+        #topbar {
+            background-color: lightblue;
+            grid-area: topbar;
+        }
+        
+        #left-aside {
+            background-color: lightcyan;
+            grid-area: left-aside;
+        }
+        
+        #main {
+            background-color: lightcoral;
+            grid-area: main;
+        }
+        
+        #right-aside {
+            background-color: lightpink;
+            grid-area: right-aside;
+        }
+        
+        #footbar {
+            background-color: lightgrey;
+            grid-area: footbar;
+        }
+        
+        #page-layout {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            grid-template-rows: 100px 400px 100px;
+            grid-gap: 10px;
+            grid-template-areas: 
+                "topbar topbar topbar topbar topbar topbar"
+                "left-aside main main main main right-aside"
+                "footbar footbar footbar footbar footbar footbar";
+        }
     </style>
 </head>
 <body>
@@ -627,8 +662,12 @@
                 <div><img src="Gaurdians of Galaxy.jpg" alt="Gaurdians of Galaxy"></div>
                 <div><img src="Ant Man.jpg" alt="Ant Man"></div>
             </div>
-            <div>
-                
+            <div id="page-layout">
+                <div id="topbar"></div>
+                <nav id="left-aside"></nav>
+                <article id="main"></article>
+                <section id="right-aside"></section>
+                <footer id="footbar"></footer>
             </div>
         </section>
     </main>
