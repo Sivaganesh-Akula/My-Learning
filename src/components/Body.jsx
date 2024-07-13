@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { restaurants } from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import { waitFor } from "../utils/waitFor";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
@@ -9,7 +10,7 @@ const Body = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const fetchData = async () => {
-    await waitFor(3000);
+    await waitFor(1000);
     setRestaurantList(restaurants);
     setFilteredRestaurants(restaurants);
   };
@@ -47,42 +48,39 @@ const Body = () => {
   };
 
   if (restaurantList.length === 0) {
+    return <Shimmer />;
+  } else {
     return (
-      <div className="shimmer">
-        {[...Array(20)].map((ele, index) => {
-          return <div key={index} className="shimmer-card"></div>;
-        })}
+      <div className="app-body">
+        <div className="filter">
+          <div className="search">
+            <input
+              type="text"
+              name="search"
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
+            <button onClick={handleSearchClick}>Search</button>
+          </div>
+          <div>
+            <button onClick={handleTopRatedResClick}>
+              Top Rated Restaurants
+            </button>
+            <button onClick={handleReset}>Reset</button>
+          </div>
+        </div>
+        <div className="res-container">
+          {filteredRestaurants.map((restaurant) => {
+            return (
+              <RestaurantCard
+                key={restaurant.info.id}
+                restaurant={restaurant}
+              />
+            );
+          })}
+        </div>
       </div>
     );
   }
-
-  return (
-    <div className="app-body">
-      <div className="filter">
-        <div className="search">
-          <input
-            type="text"
-            name="search"
-            value={searchTerm}
-            onChange={handleSearchChange}
-          />
-          <button onClick={handleSearchClick}>Search</button>
-        </div>
-        <div>
-          <button onClick={handleTopRatedResClick}>
-            Top Rated Restaurants
-          </button>
-          <button onClick={handleReset}>Reset</button>
-        </div>
-      </div>
-      <div className="res-container">
-        {filteredRestaurants.map((restaurant) => {
-          return (
-            <RestaurantCard key={restaurant.info.id} restaurant={restaurant} />
-          );
-        })}
-      </div>
-    </div>
-  );
 };
 export default Body;
