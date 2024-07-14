@@ -6,3 +6,9 @@ export const APP_LOGO =
 
 export const SWIGGY_RESTAURANT_DATA =
   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.486463&lng=78.36573419999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+
+export const SWIGGY_RESTAURANT_LIST_UPDATE =
+  "https://www.swiggy.com/dapi/restaurants/list/update";
+
+export const MENU_ITEMS =
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.486463&lng=78.36573419999999&restaurantId=";
