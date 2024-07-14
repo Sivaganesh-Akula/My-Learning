@@ -57,16 +57,21 @@ const Body = () => {
             <input
               type="text"
               name="search"
+              id="search-input"
               value={searchTerm}
               onChange={handleSearchChange}
             />
-            <button onClick={handleSearchClick}>Search</button>
+            <button className="btn" onClick={handleSearchClick}>
+              Search
+            </button>
           </div>
           <div>
-            <button onClick={handleTopRatedResClick}>
+            <button className="btn" onClick={handleTopRatedResClick}>
               Top Rated Restaurants
             </button>
-            <button onClick={handleReset}>Reset</button>
+            <button className="btn" onClick={handleReset}>
+              Reset
+            </button>
           </div>
         </div>
         <div className="res-container">

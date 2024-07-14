@@ -3,6 +3,11 @@ body {
     border: 0;
 }
 
+a {
+    text-decoration: none;
+    color: unset;
+}
+
 .header-container {
     border-bottom: 1px solid black;
     display: flex;
@@ -32,15 +37,30 @@ body {
 
 .nav-items {
     display: flex;
+}
+
+.nav-list {
+    display: flex;
     list-style-type: none;
     margin-top: 10px;
     margin-right: 10px;
     font-size: large;
 }
 
-.nav-items > li {
+.nav-list > li {
     margin: 5px;
     padding: 5px;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.login {
+    width: 100px;
+    height: 35px;
+    margin-top: 12px;
+    margin-right: 5px;
 }
 
 .res-container {
