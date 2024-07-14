@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { APP_LOGO } from "../utils/constants";
 import { useState } from "react";
+import useOnline from "../hooks/useOnline";
 
 const Header = () => {
   const [loginText, setLoginText] = useState("Login");
+  const isOnline = useOnline();
 
   const handleLoginClick = () => {
     loginText === "Login" ? setLoginText("Logout") : setLoginText("Login");
@@ -18,8 +20,12 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul className="nav-list">
+          <li>Online Status: {isOnline ? "✅" : "🔴"}</li>
           <li>
             <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/grocery">Grocery</Link>
           </li>
           <li>
             <Link to="/about">About Us</Link>
