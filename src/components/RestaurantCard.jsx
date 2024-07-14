@@ -17,3 +17,14 @@ const RestaurantCard = ({ restaurant }) => {
   );
 };
 export default RestaurantCard;
+
+export const withTopRatedLabel = (RestaurantCard) => {
+  return ({ restaurant }) => {
+    return (
+      <div>
+        <label>Top Rated</label>
+        <RestaurantCard restaurant={restaurant} />
+      </div>
+    );
+  };
+};

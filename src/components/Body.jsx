@@ -8,6 +8,8 @@ import {
 } from "../utils/constants";
 import { UPDATE_REQ_PAYLOAD } from "../utils/mockData";
 
+const TopRatedRestaurantCard = withTopRatedLabel(RestaurantCard);
+
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
@@ -121,7 +123,14 @@ const Body = () => {
                 key={restaurant.info.id}
                 to={"/restaurant/" + restaurant.info.id}
               >
-                <RestaurantCard restaurant={restaurant} />
+                {restaurant.info.avgRatingString > 4.2 &&
+                restaurant.info.name
+                  .toLowerCase()
+                  .includes(searchTerm.toLowerCase()) ? (
+                  <TopRatedRestaurantCard restaurant={restaurant} />
+                ) : (
+                  <RestaurantCard restaurant={restaurant} />
+                )}
               </Link>
             );
             // );
