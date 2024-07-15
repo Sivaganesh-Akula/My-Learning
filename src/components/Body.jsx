@@ -83,30 +83,40 @@ const Body = () => {
     return <Shimmer />;
   } else {
     return (
-      <div className="app-body">
-        <div className="filter">
-          <div className="search">
+      <div>
+        <div className="flex">
+          <div className="m-2">
             <input
               type="text"
               name="search"
-              id="search-input"
+              placeholder="My favourite hotel"
+              className="border border-gray-500 rounded ml-2"
               value={searchTerm}
               onChange={handleSearchChange}
             />
-            <button className="btn" onClick={handleSearchClick}>
+            <button
+              className="ml-2 px-5 bg-green-600 rounded text-white"
+              onClick={handleSearchClick}
+            >
               Search
             </button>
           </div>
-          <div>
-            <button className="btn" onClick={handleTopRatedResClick}>
+          <div className="mt-2">
+            <button
+              className="bg-green-600 rounded px-2 mr-2 text-white"
+              onClick={handleTopRatedResClick}
+            >
               Top Rated Restaurants
             </button>
-            <button className="btn" onClick={handleReset}>
+            <button
+              className="bg-green-600 rounded px-5 text-white"
+              onClick={handleReset}
+            >
               Reset
             </button>
           </div>
         </div>
-        <div className="res-container">
+        <div className="flex flex-wrap -mt-2">
           {filteredRestaurants.map((restaurant, index) => {
             // return
             // filteredRestaurants.length === index + 1 ? (
