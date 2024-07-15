@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState, useRef, useCallback, useContext } from "react";
 import RestaurantCard, { withTopRatedLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -7,6 +7,7 @@ import {
   SWIGGY_RESTAURANT_LIST_UPDATE,
 } from "../utils/constants";
 import { UPDATE_REQ_PAYLOAD } from "../utils/mockData";
+import UserContext from "../contexts/UserContext";
 
 const TopRatedRestaurantCard = withTopRatedLabel(RestaurantCard);
 
@@ -14,6 +15,8 @@ const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const { loggedInUser, setUserName } = useContext(UserContext);
+  const [loggedInUserName, setLoggedInUserName] = useState(loggedInUser || "");
 
   // const observer = useRef();
   // const lastResCardRef = (node) => {
@@ -79,40 +82,66 @@ const Body = () => {
     );
   };
 
+  const handleUpdateUsernameClick = () => {
+    setUserName(loggedInUserName);
+  };
+
+  const handleUsernameChange = (evt) => {
+    setLoggedInUserName(evt.target.value);
+  };
+
   if (restaurantList.length === 0) {
     return <Shimmer />;
   } else {
     return (
       <div>
-        <div className="flex">
+        <div className="flex justify-between">
+          <div className="flex">
+            <div className="m-2">
+              <input
+                type="text"
+                name="search"
+                placeholder="My favourite hotel"
+                className="border border-gray-500 rounded ml-2"
+                value={searchTerm}
+                onChange={handleSearchChange}
+              />
+              <button
+                className="ml-2 px-5 bg-green-600 rounded text-white"
+                onClick={handleSearchClick}
+              >
+                Search
+              </button>
+            </div>
+            <div className="mt-2">
+              <button
+                className="bg-green-600 rounded px-2 mr-2 text-white"
+                onClick={handleTopRatedResClick}
+              >
+                Top Rated
+              </button>
+              <button
+                className="bg-green-600 rounded px-5 text-white"
+                onClick={handleReset}
+              >
+                Reset
+              </button>
+            </div>
+          </div>
           <div className="m-2">
             <input
               type="text"
               name="search"
-              placeholder="My favourite hotel"
+              placeholder="username"
               className="border border-gray-500 rounded ml-2"
-              value={searchTerm}
-              onChange={handleSearchChange}
+              value={loggedInUserName}
+              onChange={handleUsernameChange}
             />
             <button
               className="ml-2 px-5 bg-green-600 rounded text-white"
-              onClick={handleSearchClick}
+              onClick={handleUpdateUsernameClick}
             >
-              Search
-            </button>
-          </div>
-          <div className="mt-2">
-            <button
-              className="bg-green-600 rounded px-2 mr-2 text-white"
-              onClick={handleTopRatedResClick}
-            >
-              Top Rated Restaurants
-            </button>
-            <button
-              className="bg-green-600 rounded px-5 text-white"
-              onClick={handleReset}
-            >
-              Reset
+              Update
             </button>
           </div>
         </div>
