@@ -3,17 +3,19 @@ import { APP_LOGO } from "../utils/constants";
 import { useContext, useState } from "react";
 import useOnline from "../hooks/useOnline";
 import UserContext from "../contexts/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [loginText, setLoginText] = useState("Login");
   const isOnline = useOnline();
   const { loggedInUser } = useContext(UserContext);
+  const cartItems = useSelector((state) => state.cart.items);
 
   const handleLoginClick = () => {
     loginText === "Login" ? setLoginText("Logout") : setLoginText("Login");
   };
   return (
-    <div className="flex bg-slate-100 justify-between p-2 shadow-gray-600 shadow-md">
+    <div className="flex bg-slate-100 justify-between p-2 shadow-gray-600 shadow-md fixed w-full top-0 z-50">
       <div>
         <Link to="/">
           <img
@@ -42,7 +44,9 @@ const Header = () => {
             <li className="pl-3">
               <Link to="/contact">Contact Us</Link>
             </li>
-            <li className="pl-3">Cart</li>
+            <li className="pl-3">
+              <Link to="/cart">Cart ({cartItems.length} items)</Link>
+            </li>
           </ul>
         </div>
         <div className="flex">
