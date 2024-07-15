@@ -12,3 +12,6 @@ export const SWIGGY_RESTAURANT_LIST_UPDATE =
 
 export const MENU_ITEMS =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.486463&lng=78.36573419999999&restaurantId=";
+
+export const DEFAULT_DISH_IMG =
+  "https://us.123rf.com/450wm/polyudova/polyudova1701/polyudova170100061/69876925-healthy-food-and-paper-vector-blank-template-top-view-vegetable-egg-salmon-nut-cheese-lime-lemon.jpg";
