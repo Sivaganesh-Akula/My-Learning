@@ -35,7 +35,7 @@ const RestaurantItemList = ({ items, cart }) => {
             <div className="w-1/4 m-1 p-1 relative">
               <button
                 onClick={() => handleClick(item)}
-                className="absolute bg-white px-5 text-green-600 rounded-sm shadow-md opacity-85 mx-auto bottom-0 left-7"
+                className="absolute bg-white px-5 text-green-600 rounded-sm shadow-md opacity-85 mx-auto bottom-0 right-[16%]"
               >
                 {cart ? "Remove" : "Add"}
               </button>
